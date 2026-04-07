@@ -1,5 +1,6 @@
 import asyncio
 import json
+import threading
 from daemon.asynaprous import AsynapRous
 from daemon.request import Request
 
@@ -14,8 +15,6 @@ async def handle_incoming_chat(headers, body):
     print(f"\n[Tin nhắn từ {data['sender']}]: {data['msg']}")
     print("Nhập tin nhắn của bạn: ", end='', flush=True)
     return {'status': 'success'}import socket
-import threading
-import json
 
 HOST = "127.0.0.1"
 
